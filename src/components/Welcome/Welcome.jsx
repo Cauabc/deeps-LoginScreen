@@ -15,7 +15,12 @@ const Container = styled.div`
         font-weight: bold;
     }
 
+    & h1 {
+        font-size: 5vw;
+    }
+
     & p {
+        font-size: 4vw;
         margin-top: 1rem;
     }
 `
@@ -24,7 +29,7 @@ const SignForm = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 5vh;
 `
 
 const Button = styled.button`
@@ -32,11 +37,15 @@ const Button = styled.button`
     border: 0;
     width: 150px;
     height: 60px;
-    color: ${({color}) => color};
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
     margin-right: 1rem;
+
+    & a {
+        text-decoration: none;
+        color: ${({color}) => color};
+    }
 `
 
 export default function Welcome() {
@@ -46,10 +55,10 @@ export default function Welcome() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe cupiditate blanditiis sit inventore maxime officia iure necessitatibus debitis.</p>
         <SignForm>
             <Button backgroundColor="#000" color='#fff'>
-                Sign In
+                <a href="/signin">Sign In</a>
             </Button>
             <Button backgroundColor="#fff" color='#000'>
-                Sign Up
+                <a href="/signup">Sign Up</a>
             </Button>
         </SignForm>
     </Container>
