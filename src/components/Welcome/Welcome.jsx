@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
     background-color: #ffbc04;
@@ -37,15 +38,11 @@ const Button = styled.button`
     border: 0;
     width: 150px;
     height: 60px;
+    color: ${({color}) => color};
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
     margin-right: 1rem;
-
-    & a {
-        text-decoration: none;
-        color: ${({color}) => color};
-    }
 `
 
 export default function Welcome() {
@@ -54,12 +51,16 @@ export default function Welcome() {
         <h1>Welcome</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe cupiditate blanditiis sit inventore maxime officia iure necessitatibus debitis.</p>
         <SignForm>
-            <Button backgroundColor="#000" color='#fff'>
-                <a href="/signin">Sign In</a>
-            </Button>
-            <Button backgroundColor="#fff" color='#000'>
-                <a href="/signup">Sign Up</a>
-            </Button>
+            <Link to={"/signin"}>
+                <Button backgroundColor="#000" color='#fff'>
+                    Sign In
+                </Button>
+            </Link>
+            <Link to={"/signup"}>
+                <Button backgroundColor="#fff" color='#000'>
+                    Sign Up
+                </Button>
+            </Link>
         </SignForm>
     </Container>
   )

@@ -1,25 +1,19 @@
 import SignIn from "./pages/SignIn/SignIn"
 import SignUp from "./pages/SignUp/SignUp"
 import Content from "./components/Content/Content"
+import {Routes, Route} from 'react-router-dom'
 
 
 function App() {
-  let Component
-  switch (window.location.pathname){
-    case '/':
-     Component = Content
-    break;
-    case '/signin':
-      Component = SignIn
-    break;
-    case '/signup':
-      Component = SignUp
-    break;
-  }
+  
 
   return (
     <>
-      <Component/>
+      <Routes>
+        <Route path="/" element={<Content/>}/>
+        <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+      </Routes>
     </>
   )
 }
