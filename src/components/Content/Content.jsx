@@ -23,8 +23,8 @@ export default function Content() {
       <Container>
         <TextMark handleClick={onClick} clicked={buttonClicked}/>
 
-        {buttonClicked ? <Welcome/> : <BackgroundCircle bottom="-15rem" left="-15rem" heightAndWidth="35rem" mobileHeight="120vw"/>}
-        {buttonClicked ? "" : <BackgroundCircle bottom="50%" left="70%" heightAndWidth="35rem" mobileHeight="180vw" leftMobile="60%"/>}
+        {buttonClicked ? <Welcome/> : <BackgroundCircle bottom="-20rem" left="-15rem" heightAndWidth="35rem" mobileHeight="120vw"/>}
+        {buttonClicked ? "" : <BackgroundCircle bottom="60%" left="70%" heightAndWidth="35rem" mobileHeight="180vw" leftMobile="60%"/>}
       </Container>
   )
 }
