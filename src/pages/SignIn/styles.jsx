@@ -42,7 +42,7 @@ export const HeaderNav = styled.nav`
 
 export const FormArea = styled.div`
     border-radius: 40px 40px 0 0;
-    height: 80vh;
+    height: 85vh;
     width: 100vw;
     background-color: #fff;
     box-shadow: 0px 0px 50px -20px #000;
@@ -68,8 +68,8 @@ export const Button = styled.button`
     color: #fff;
     font-weight: bold;
     font-size: 1.2rem;
-    height: 4rem;
-    margin-top: 1.5rem;
+    height: 5rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
 
     &:hover{
