@@ -15,7 +15,6 @@ export const GlobalStyles = createGlobalStyle`
     
     body{
       min-height: 100vh;
-      overflow-y: ${(props) => props.overflow};
       overflow-x: hidden;
       font-family: 'Ubuntu', sans-serif;
     }`
@@ -29,9 +28,9 @@ function App() {
       const handleRouteChange = () => {
         const body = document.querySelector("body");
         if (location.pathname === "/") {
-          body.style.overflow = "hidden";
+          body.style.overflowY = "hidden";
         } else {
-          body.style.overflow = "auto";
+          body.style.overflowY = "auto";
         }
       };
 
@@ -41,11 +40,10 @@ function App() {
         window.removeEventListener("popstate", handleRouteChange);
       };
     }, [location]);
-    
-
+  
   return (
     <>
-      <GlobalStyles overflow="auto"/>
+      <GlobalStyles/>
         <Routes>
           <Route path="/" element={<Content/>}/>
           <Route path="/signin" element={<SignIn/>}/>
